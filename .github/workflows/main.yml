@@ -38,9 +38,9 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
 
-        - name: Check Terraform Version
-  run: terraform -version
+      - name: Check Terraform Version
+        run: terraform -version
 
-- name: List files
-  run: ls -R
+      - name: List files
+        run: ls -R
 
