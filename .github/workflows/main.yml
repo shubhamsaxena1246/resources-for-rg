@@ -37,3 +37,10 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
+
+        - name: Check Terraform Version
+  run: terraform -version
+
+- name: List files
+  run: ls -R
+
